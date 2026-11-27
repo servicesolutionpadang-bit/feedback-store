@@ -48,7 +48,7 @@ function selectedDayTransactions(){return transactions.filter(x=>String(x.date||
 function onTargetDateChange(){targetDate=$('dashboardDate').value;renderKpi();renderTable('Furniture');renderTable('COMSER');renderFeedbackOperational();}
 const $=id=>document.getElementById(id);
 // API GitHub Pages -> Cloudflare Worker -> Google Apps Script
-const API_URL = 'PASTE_CLOUDFLARE_WORKER_URL_HERE';
+const API_URL = 'https://feedback-store-api.servicesolutionpadang.workers.dev';
 function server(fn,arg){
   if(!API_URL || API_URL.includes('PASTE_')){
     return Promise.reject(new Error('API belum dikonfigurasi. Isi API_URL pada index.html dengan URL Cloudflare Worker.'));
